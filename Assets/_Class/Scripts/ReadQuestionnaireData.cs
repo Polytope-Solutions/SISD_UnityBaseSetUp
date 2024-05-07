@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ReadQuestionnaireData : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class ReadQuestionnaireData : MonoBehaviour
 
     // Create a list
     public List<QuestionnaireEntry> data;
+    public UnityEvent finishedReadingData;
 
     private void Start() {
         ParseData();
@@ -38,6 +40,10 @@ public class ReadQuestionnaireData : MonoBehaviour
                 = new QuestionnaireEntry(rawValues);
             // Add the entry to the list.
             data.Add(newEntry);
+        }
+
+        if (finishedReadingData != null) {
+            finishedReadingData.Invoke();
         }
     }
 }

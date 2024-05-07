@@ -12,6 +12,14 @@ public class QuestionnaireEntry
     public int question3;
     public int question4;
 
+    // Enumaerate the options
+    public enum QuestionType { 
+        Question1,
+        Question2,
+        Question3,
+        Question4
+    }
+
     // Constructor - a function that returns an instance of the class.
     public QuestionnaireEntry(string[] rawValues) {
         // int - Convert.ToInt32()
