@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Class/Scenes/Class04/Class04-05_ReadingData.unity
     guid: 6133afefd1a53974db0bbd8b9031222e
+  - enabled: 1
+    path: Assets/_Class/Scenes/Class05/Class05_Connections.unity
+    guid: f833077ed17083248950db4fcbd9fbf1
   m_configObjects: {}
